@@ -1,0 +1,17 @@
+# Grafana Loki Setup
+
+1. Start Loki locally using Docker:
+   docker run -d --name=loki -p 3100:3100 grafana/loki:2.9.0
+
+2. Forward container logs to Loki:
+   Example using Docker driver:
+   
+   docker logs <container_id> --follow | curl -XPOST \
+     -H "Content-Type: application/json" \
+     --data-binary @- http://localhost:3100/loki/api/v1/push
+
+3. View logs:
+   You can query logs via Loki’s API:
+   curl "http://localhost:3100/loki/api/v1/query?query={job=\"hello\"}"
+
+   Or connect Grafana to Loki (add Loki as a data source in Grafana UI).
