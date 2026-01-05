@@ -11,6 +11,12 @@ It contains all relevant files, configurations, and documentation required to de
 
 ---
 
+### Architecture
+
+![Architecture Diagram](architecture.png)
+
+---
+
 ### 🚀 Key Highlights
 - Structured for clarity and ease of navigation  
 - Demonstrates DevOps principles and workflows using open-source tools I've learned (Linux, GitHub, Docker, CI/CD, Nomad, Monitoring) 
